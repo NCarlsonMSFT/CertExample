@@ -61,3 +61,6 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# Ensure bash scripts are always checked out with linux style line endings
+*.sh text eol=lf

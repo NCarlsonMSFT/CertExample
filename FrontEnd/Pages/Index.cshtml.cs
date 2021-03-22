@@ -17,7 +17,7 @@ namespace FrontEnd.Pages
 
         public async Task OnGetAsync()
         {
-            using var channel = GrpcChannel.ForAddress("https://localhost:5002");
+            using var channel = GrpcChannel.ForAddress("https://backend:443");
             var client = new Greeter.GreeterClient(channel);
             var reply = await client.SayHelloAsync(
                               new HelloRequest { Name = "Front End" });

@@ -5,6 +5,10 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+FROM base AS testCerts
+ADD Certs/test-ca.crt /usr/local/share/ca-certificates/test-ca.crt
+RUN chmod 644 /usr/local/share/ca-certificates/test-ca.crt && update-ca-certificates
+
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["FrontEnd/FrontEnd.csproj", "FrontEnd/"]

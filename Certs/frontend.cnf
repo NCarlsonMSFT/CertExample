@@ -1,0 +1,13 @@
+[req]
+distinguished_name = req_distinguished_name
+prompt = no
+req_extensions = req_v3
+[req_distinguished_name]
+O = Contoso
+CN = frontend
+[ alternate_names ]
+DNS.1 = localhost
+DNS.2 = frontend
+[ req_v3 ]
+subjectAltName = @alternate_names
+keyUsage = digitalSignature, keyEncipherment

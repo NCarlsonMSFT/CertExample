@@ -3,6 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Generated Cert files
+*.crt
+*.csr
+*.key
+*.pem
+*.cer
+*.srl
+/Certs/password.txt
+/docker-compose.vs.debug.yml
+
 # User-specific files
 *.rsuser
 *.suo
