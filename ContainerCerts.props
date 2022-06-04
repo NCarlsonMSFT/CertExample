@@ -1,0 +1,10 @@
+<Project>
+
+  <!-- If Create-Certs has been run, use the generated certs -->
+  <PropertyGroup Condition="Exists('$(MSBuildProjectDirectory)\ContainerCerts.env')">
+    <DockerfileFastModeStage>testCerts</DockerfileFastModeStage>
+    <DockerfileRunEnvironmentFiles>$(MSBuildProjectDirectory)\ContainerCerts.env</DockerfileRunEnvironmentFiles>
+    <DockerfileRunArguments>-v "$(MSBuildProjectDirectory)\..\Certs:/Certs"</DockerfileRunArguments>
+  </PropertyGroup>
+
+</Project>

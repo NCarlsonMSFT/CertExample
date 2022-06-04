@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="CreateCerts">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,6 +6,10 @@
     <UserSecretsId>23061785-54c9-46dd-bc9a-5e7ce6304f3e</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ContainerCerts.env" />
+  </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
@@ -16,4 +20,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
   </ItemGroup>
 
+  <Target Name="CreateCerts" Inputs="$(MSBuildProjectDirectory)\..\Certs\Create-Certs.ps1" Outputs="$(MSBuildProjectDirectory)\ContainerCerts.env" Condition=" '$(BuildingInsideVisualStudio)' == 'true' ">
+    <Exec Command="powershell -ExecutionPolicy ByPass ..\Certs\Create-Certs.ps1" WorkingDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+  <Import Project="..\ContainerCerts.props" />
 </Project>

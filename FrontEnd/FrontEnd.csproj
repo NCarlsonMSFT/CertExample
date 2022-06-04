@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ContainerCerts.env" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
   </ItemGroup>
@@ -18,4 +22,5 @@
     </Protobuf>
   </ItemGroup>
 
+  <Import Project="..\ContainerCerts.props" />
 </Project>

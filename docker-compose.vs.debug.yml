@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  frontend:
+    build:
+      target: testCerts
+    env_file:
+      - ./FrontEnd/ContainerCerts.env
+    volumes:
+      - ./Certs:/Certs
+  backend:
+    build:
+      target: testCerts
+    env_file:
+      - ./BackEnd/ContainerCerts.env
+    volumes:
+      - ./Certs:/Certs

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31025.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}"
 EndProject
@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Certs", "Certs", "{BBB7EAA5-B79F-4DEF-BE12-FA25803E8330}"
 	ProjectSection(SolutionItems) = preProject
 		Certs\backend.cnf = Certs\backend.cnf
+		Certs\Clean-Certs.ps1 = Certs\Clean-Certs.ps1
+		Certs\ContainerCerts.env.template = Certs\ContainerCerts.env.template
+		ContainerCerts.props = ContainerCerts.props
 		Certs\CreateCerts.sh = Certs\CreateCerts.sh
 		Certs\docker-compose.vs.debug.yml.template = Certs\docker-compose.vs.debug.yml.template
 		Certs\frontend.cnf = Certs\frontend.cnf
@@ -26,6 +29,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81138AE8-9584-4216-9B60-21AD01EBDF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{81138AE8-9584-4216-9B60-21AD01EBDF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81138AE8-9584-4216-9B60-21AD01EBDF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,10 +41,6 @@ Global
 		{011F80EE-1211-488B-8017-D6B2449A3C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{011F80EE-1211-488B-8017-D6B2449A3C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{011F80EE-1211-488B-8017-D6B2449A3C8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0183BCA-8B0E-4E1B-A3B5-0E338F4AC461}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

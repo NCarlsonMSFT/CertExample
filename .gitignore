@@ -11,7 +11,8 @@
 *.cer
 *.srl
 /Certs/password.txt
-/docker-compose.vs.debug.yml
+/BackEnd/ContainerCerts.env
+/FrontEnd/ContainerCerts.env
 
 # User-specific files
 *.rsuser

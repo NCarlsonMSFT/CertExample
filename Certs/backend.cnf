@@ -8,6 +8,7 @@ CN = backend
 [ alternate_names ]
 DNS.1 = localhost
 DNS.2 = backend
+DNS.3 = host.docker.internal
 [ req_v3 ]
 subjectAltName = @alternate_names
 keyUsage = digitalSignature, keyEncipherment
